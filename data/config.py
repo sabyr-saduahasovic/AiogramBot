@@ -1,6 +1,6 @@
 BOT_TOKEN = '1589122815:AAG2KPoitw1Jlchp6SjG1G_-o4HhL46g5MQ'
 
-PROJECT_NAME = 'store-bot-example'
+PROJECT_NAME = 'store-bot'
 
 WEBHOOK_HOST = f"https://{PROJECT_NAME}.herokuapp.com"
 WEBHOOK_PATH = '/webhook/' + BOT_TOKEN

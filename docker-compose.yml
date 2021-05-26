@@ -6,9 +6,13 @@ services:
     image: postgres:10-alpine
     ports:
       - "5432:5432"
+    env_file:
+      - ".env"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: example
+
+
   adminer:
     image: adminer
     restart: always
@@ -16,3 +20,13 @@ services:
       - postgresdb
     ports:
       - 8070:8080
+
+  tgbot:
+    container_name: bot
+    build:
+      context: .
+    command: python app.py
+    restart: always
+
+    env_file:
+      - ".env"
